@@ -61,32 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
       phraseElement.textContent = phrases[randomIndex];
       titre.textContent = `Phrases ${randomIndex + 1} / ${totalPhrases}`;
 
-      // Générer une couleur aléatoire qui n'est pas trop sombre
-      let randomColor = '#';
-      do {
-        randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); // Génère une couleur aléatoire en hexadécimal
-      } while (estTropSombre(randomColor));
-      phraseElement.style.backgroundColor = randomColor;
-
       // Changer la typographie à chaque changement de phrase
       const fonts = ["Arial", "Helvetica", "Verdana", "Georgia", "Times New Roman", "Courier New"];
       const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
       phraseElement.style.fontFamily = randomFont;
-
-      // On change également la couleur du bouton pour correspondre au post-it
-      bouton.style.backgroundColor = randomColor;
-    }
-
-    // Vérifier si une couleur est trop sombre
-    function estTropSombre(couleur) {
-      // Convertir la couleur en RGB
-      const r = parseInt(couleur.substr(1, 2), 16);
-      const g = parseInt(couleur.substr(3, 2), 16);
-      const b = parseInt(couleur.substr(5, 2), 16);
-      // Calculer la luminosité relative (formule WCAG)
-      const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
-      // Retourner true si la luminosité est inférieure à 0.5 (couleur sombre), sinon false
-      return luminance < 0.5;
     }
 
     // Afficher une phrase aléatoire lors du chargement de la page

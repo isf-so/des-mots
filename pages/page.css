@@ -32,7 +32,7 @@ h1 {
 button {
   padding: 10px 20px;
   font-size: 0.8em;
-  background-color: #007bff;
+  background-color: rgba(179, 0, 137, 0.385);
   color: #000000;
   border: none;
   cursor: pointer;
@@ -41,7 +41,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: rgba(177, 0, 136, 0);
   border: 2px solid #000000;
   animation: shake 0.5s;
 }
