@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const randomIndex = Math.floor(Math.random() * phrases.length);
       const totalPhrases = phrases.length;
       phraseElement.textContent = phrases[randomIndex];
-      titre.textContent = `Phrase ${randomIndex + 1} / ${totalPhrases}`;
+      titre.textContent = `Phrases ${randomIndex + 1} / ${totalPhrases}`;
 
       // Générer une couleur aléatoire qui n'est pas trop sombre
       let randomColor = '#';
