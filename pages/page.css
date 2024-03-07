@@ -1,44 +1,59 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgba(177, 0, 135, 0.521);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgba(177, 0, 135, 0.521);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  text-align: center;
+  position: relative; /* Ajout pour positionner les éléments enfants absolument */
+}
+
+h1 {
+  color: #333;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
   }
-  
-  .container {
-    max-width: 600px;
-    text-align: center;
+  to {
+    transform: scale(1.06);
   }
-  
-  h1 {
-    color: #333;
-  }
-  
-  #phrase {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #ffd700;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #007bff;
-    color: #000000;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-    border: 2px solid #000000;
-  }
-  
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  position: absolute; /* Ajout pour positionner le bouton absolument */
+  bottom: -30px; /* Ajustez cette valeur selon votre préférence */
+  left: 36%; /* Centre le bouton horizontalement */
+}
+
+button:hover {
+  background-color: #0056b3;
+  border: 2px solid #000000;
+}
+
+
+
+#phrase {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  padding: 20px;
+  animation: pulse 2s infinite alternate;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
