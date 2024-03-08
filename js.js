@@ -11,3 +11,9 @@ function checkPassword() {
     alert('Mot incorrect, réessaye !');
   }
 }
+
+
+
+var audio = new Audio('jamie.mp3');
+audio.volume = 0.2; // Met le volume à 50%
+audio.play();
