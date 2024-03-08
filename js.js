@@ -8,6 +8,6 @@ function checkPassword() {
   } else if (password === 'help') {
     window.location.href = 'help/help.html'; // Rediriger vers la page suivante après la connexion réussie
   } else {
-    alert('Mot de passe incorrect. Veuillez réessayer.');
+    alert('Mot incorrect, réessaye !');
   }
 }

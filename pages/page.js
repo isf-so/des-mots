@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function afficherPhrase(numero) {
         if (numero >= 1 && numero <= phrases.length) {
             phraseElement.textContent = phrases[numero - 1];
-            titre.textContent = `Phrase ${numero} / ${phrases.length}`;
+            titre.textContent = `Phrases ${numero} / ${phrases.length}`;
         } else {
             phraseElement.textContent = "Numéro de phrase invalide";
         }
