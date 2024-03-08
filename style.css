@@ -48,3 +48,47 @@ footer {
 footer p {
   margin: 5px; /* Marge autour du paragraphe */
 }
+
+
+
+
+
+.container1 {
+  color: #000000;
+  font-size: 1.13rem; /* 2.26rem / 2 */
+  text-transform: uppercase;
+  height: 15px; /* 30px / 2 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animation {
+  height: 25px; /* 50px / 2 */
+  overflow: hidden;
+  margin-left: 0.5rem; /* 1rem / 2 */
+}
+
+.animation > div > div {
+  padding: 0.125rem 0.375rem; /* 0.25rem / 2, 0.75rem / 2 */
+  height: 1.4055rem; /* 2.81rem / 2 */
+  margin-bottom: 1.4055rem; /* 2.81rem / 2 */
+  display: inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+@keyframes text-animation {
+  0% { margin-top: 0; }
+  10% { margin-top: 0; }
+  20% { margin-top: -2.81rem; }
+  30% { margin-top: -2.81rem; }
+  40% { margin-top: -5.62rem; }
+  60% { margin-top: -5.62rem; }
+  70% { margin-top: -2.81rem; }
+  80% { margin-top: -2.81rem; }
+  90% { margin-top: 0; }
+  100% { margin-top: 0; }
+}
+
