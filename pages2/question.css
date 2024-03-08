@@ -33,6 +33,13 @@ body {
     text-align: center;
 }
 
+/* CSS pour styliser la zone de texte */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 textarea {
     width: 70%; /* Largeur de la zone de texte */
     height: 100px; /* Hauteur de la zone de texte */
@@ -44,12 +51,12 @@ textarea {
     resize: none; /* Désactiver le redimensionnement de la zone de texte */
 }
 
-/* CSS pour positionner les boutons en bas */
+/* CSS pour styliser les boutons */
 #buttons {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
@@ -69,6 +76,7 @@ button:hover {
     border: 2px solid #000000;
     animation: shake 0.5s;
 }
+
   
   
   /* Ajoutez ce code CSS à votre fichier style.css */
