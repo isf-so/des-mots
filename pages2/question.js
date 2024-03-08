@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     let questions = [
-        "A qui penses-tu en lisant 'Parfois, la simple présence de certaines personnes est plus bénéfique que n'importe quel médicament.'",
+        "A qui penses-tu en lisant 'Parfois, la simple présence de certaines personnes est plus bénéfique que n'importe quel médicament.' ?",
         "Qui est cette personne avec qui les heures semblent être des minutes ?",
-        "A qui penses-tu en lisant 'Merci d'être resté à mes côtés quand j'étais au plus bas'",
+        "A qui penses-tu en lisant 'Merci d'être resté à mes côtés quand j'étais au plus bas' ?",
         "Qui est cette la personne avec qui tu peux juste être toi même sans te soucier de son regard ?",
         "Que dirais-tu à ton toi du passé pour ne pas reproduire les mêmes erreurs ?",
         "Quand as-tu été réellement heureux pour la dernière fois ?",
-        "A qui penses-tu en lisant 'certaines personnes méritent tout le bonheur du monde'",
-        "Si tu écrivais un livre sur ta mère, quelle serait la dernière ligne ?"
+        "A qui penses-tu en lisant 'certaines personnes méritent tout le bonheur du monde' ?",
+        "Si tu écrivais un livre sur toi, quelle serait la dernière ligne ?"
     ];
 
     const questionElement = document.getElementById('question');
