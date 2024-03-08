@@ -10,7 +10,12 @@
   <div class="container">
     <h1></h1>
     <p id="phrase"></p>
-    <button id="bouton">prochaine phrase :)</button>
+    <button id="bouton">Prochaine phrase :)</button>
+    <div class="input-container">
+      <label for="numeroPhrase">Saisir le numéro de la phrase :</label>
+      <input type="number" id="numeroPhrase" min="1" max="45"> <!-- Modifier le "max" selon le nombre de phrases -->
+    </div>
+    <button id="afficherPhrase">Afficher la phrase</button>
   </div>
 
   <script src="page.js"></script>

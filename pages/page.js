@@ -52,19 +52,24 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     const phraseElement = document.getElementById('phrase');
     const bouton = document.getElementById('bouton');
+    const boutonAfficher = document.getElementById('afficherPhrase');
+    const numeroPhraseInput = document.getElementById('numeroPhrase');
     const titre = document.querySelector('h1');
+
+    // Fonction pour afficher une phrase aléatoire ou une phrase spécifique en fonction de son numéro
+    function afficherPhrase(numero) {
+        if (numero >= 1 && numero <= phrases.length) {
+            phraseElement.textContent = phrases[numero - 1];
+            titre.textContent = `Phrase ${numero} / ${phrases.length}`;
+        } else {
+            phraseElement.textContent = "Numéro de phrase invalide";
+        }
+    }
 
     // Fonction pour afficher une phrase aléatoire
     function afficherPhraseAleatoire() {
-      const randomIndex = Math.floor(Math.random() * phrases.length);
-      const totalPhrases = phrases.length;
-      phraseElement.textContent = phrases[randomIndex];
-      titre.textContent = `Phrases ${randomIndex + 1} / ${totalPhrases}`;
-
-      // Changer la typographie à chaque changement de phrase
-      const fonts = ["Arial", "Helvetica", "Verdana", "Georgia", "Times New Roman", "Courier New"];
-      const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
-      phraseElement.style.fontFamily = randomFont;
+        const randomIndex = Math.floor(Math.random() * phrases.length) + 1;
+        afficherPhrase(randomIndex);
     }
 
     // Afficher une phrase aléatoire lors du chargement de la page
@@ -72,4 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ajouter un écouteur d'événement sur le bouton pour afficher une nouvelle phrase aléatoire
     bouton.addEventListener('click', afficherPhraseAleatoire);
+
+    // Ajouter un écouteur d'événement sur le bouton pour afficher une phrase spécifique selon son numéro
+    boutonAfficher.addEventListener('click', function() {
+        const numeroPhrase = parseInt(numeroPhraseInput.value);
+        afficherPhrase(numeroPhrase);
+    });
 });
